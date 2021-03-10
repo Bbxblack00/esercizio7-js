@@ -29,14 +29,13 @@
   //  caso in cui sia dispari
 
   var num = parseInt(prompt('INSERISCI UN NUMERO'));
-
   var myResult = document.getElementById('result');
 
+  myResult.innerHTML = num;
+
   if (num % 2 == 0) {
-    myResult.innerHTML = num;
     myResult.className += " pair";
   } else {
-    myResult.innerHTML = num;
     myResult.className += " odd";
   }
 
