@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>esercizio</title>
+    <style media="screen">
+      .title{
+        text-align: center;
+      }
+      .pair{
+        color: red;
+      }
+      .odd{
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+
+    <h1 class="title" id="result"></h1>
+
+  </body>
+  <script type="text/javascript">
+
+  //  acquisire numero da utente, stamparlo
+  //  all'interno dell'h1
+  //  colorare poi il testo di rosso nel caso
+  //  in cui il numero sia pari e di verde nel
+  //  caso in cui sia dispari
+
+  var num = parseInt(prompt('INSERISCI UN NUMERO'));
+
+  var myResult = document.getElementById('result');
+
+  if (num % 2 == 0) {
+    myResult.innerHTML = num;
+    myResult.className += " pair";
+  } else {
+    myResult.innerHTML = num;
+    myResult.className += " odd";
+  }
+
+  </script>
+</html>
