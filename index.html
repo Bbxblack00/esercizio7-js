@@ -48,13 +48,35 @@
 
 
   // secondo modo senza un h1
-  var num = parseInt(prompt('INSERISCI UN NUMERO'));
+  // var num = parseInt(prompt('INSERISCI UN NUMERO'));
+  // var myRow = document.getElementById('row');
+  //
+  // if (num % 2 == 0) {
+  //   myRow.innerHTML = '<h1 class="title pair">' + num + '</h1>';
+  // } else {
+  //   myRow.innerHTML = '<h1 class="title odd">' + num + '</h1>';
+  // }
+
+
+  // generare 10 numeri casuali da stampare in h1 di classe
+  // pari o dispari all'interno del tag row
+
   var myRow = document.getElementById('row');
 
-  if (num % 2 == 0) {
-    myRow.innerHTML = '<h1 class="title pair">' + num + '</h1>';
-  } else {
-    myRow.innerHTML = '<h1 class="title odd">' + num + '</h1>';
+  for (var i = 0; i < 10; i++) {
+
+    var rndNumber = Math.floor(Math.random() * 100) + 1;
+
+    if (rndNumber % 2 == 0) {
+
+      myRow.innerHTML += "<h1 class='pair title'>" + rndNumber + "</h1> <br> <hr>";
+
+    }else {
+
+      myRow.innerHTML += "<h1 class='odd title'>" + rndNumber + "</h1> <br> <hr>";
+
+    }
+
   }
 
 
