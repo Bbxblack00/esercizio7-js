@@ -17,7 +17,13 @@
   </head>
   <body>
 
-    <h1 class="title" id="result"></h1>
+    <div class="row" id="row">
+
+    </div>
+
+
+    <!-- solo con il primo caso -->
+    <!-- <h1 class="title" id="result"></h1> -->
 
   </body>
   <script type="text/javascript">
@@ -28,16 +34,31 @@
   //  in cui il numero sia pari e di verde nel
   //  caso in cui sia dispari
 
-  var num = parseInt(prompt('INSERISCI UN NUMERO'));
-  var myResult = document.getElementById('result');
+  //primo caso con un h1 già esistente
+  // var num = parseInt(prompt('INSERISCI UN NUMERO'));
+  // var myResult = document.getElementById('result');
+  //
+  // myResult.innerHTML = num;
+  //
+  // if (num % 2 == 0) {
+  //   myResult.className += " pair";
+  // } else {
+  //   myResult.className += " odd";
+  // }
 
-  myResult.innerHTML = num;
+
+
+  var num = parseInt(prompt('INSERISCI UN NUMERO'));
+  var myRow = document.getElementById('row');
 
   if (num % 2 == 0) {
-    myResult.className += " pair";
+    myRow.innerHTML = '<h1 class="title pair">' + num + '</h1>';
   } else {
-    myResult.className += " odd";
+    myRow.innerHTML = '<h1 class="title odd">' + num + '</h1>';
   }
+
+
+
 
   </script>
 </html>
